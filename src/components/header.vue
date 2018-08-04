@@ -13,10 +13,8 @@
 </template>
 
 <script>
-	
-	
 	export default {
-		name: 'header',
+		name: 'Header',
 		data () {
 			return {
 				mail: 'dimitris@dimitrisskiadas.com',
@@ -41,7 +39,8 @@
 		height: 85px;
 	}
 	#logo {
-		height: 85px;
+		margin: 10px 0px;
+		height: 65px;
 	}
 	#mail {
 		height: 35px;
