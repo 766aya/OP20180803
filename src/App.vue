@@ -5,6 +5,7 @@
 		<Lines></Lines>
 		<Introduce></Introduce>
 		<Lines></Lines>
+		<Plain-text-block></Plain-text-block>
 		<Lines></Lines>
 		<Lines></Lines>
 		<Lines></Lines>
@@ -19,7 +20,8 @@
 	import Banner from './components/banner'
 	import Lines from './components/LogoSegmentingLine'
 	import Introduce from './components/introduce'
-	
+	import PlainTextBlock from "./components/PlainTextBlock";
+
 	export default {
 		name: 'app',
 		data() {
@@ -37,5 +39,7 @@
 </script>
 
 <style>
-
+	* {
+		font-family: "Montserrat", Helvetica, sans-serif;
+	}
 </style>
