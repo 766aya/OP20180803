@@ -5,9 +5,11 @@
 		<Lines></Lines>
 		<Introduce></Introduce>
 		<Lines></Lines>
-		<Plain-text-block></Plain-text-block>
+		<Plain-text-block1></Plain-text-block1>
 		<Lines></Lines>
+		<Graphic-introduction></Graphic-introduction>
 		<Lines></Lines>
+		<Plain-text-block2></Plain-text-block2>
 		<Lines></Lines>
 		<Lines></Lines>
 		<Lines></Lines>
@@ -20,7 +22,9 @@
 	import Banner from './components/banner'
 	import Lines from './components/LogoSegmentingLine'
 	import Introduce from './components/introduce'
-	import PlainTextBlock from "./components/PlainTextBlock";
+	import PlainTextBlock1 from "./components/PlainTextBlock";
+	import PlainTextBlock2 from "./components/PlainTextBlock2";
+	import GraphicIntroduction from "./components/GraphicIntroduction"
 
 	export default {
 		name: 'app',
@@ -33,7 +37,10 @@
 			Header,
 			Banner,
 			Lines,
-			Introduce
+			Introduce,
+			PlainTextBlock1,
+			PlainTextBlock2,
+			GraphicIntroduction
 		}
 	}
 </script>

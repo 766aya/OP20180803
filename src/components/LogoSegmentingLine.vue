@@ -25,6 +25,7 @@
     .line {
         margin: 10px 0px;
         height: 70px;
+        clear: both;
     }
     .img {
         height: 70px;
