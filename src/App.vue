@@ -7,10 +7,11 @@
 		<Lines></Lines>
 		<Plain-text-block1></Plain-text-block1>
 		<Lines></Lines>
-		<Graphic-introduction></Graphic-introduction>
-		<Lines></Lines>
+		<Graphic-introduction1></Graphic-introduction1>
+		<!-- <Lines></Lines> -->
 		<Plain-text-block2></Plain-text-block2>
-		<Lines></Lines>
+		<!-- <Lines></Lines> -->
+		<Graphic-introduction2></Graphic-introduction2>
 		<Lines></Lines>
 		<Lines></Lines>
 		<Lines></Lines>
@@ -24,7 +25,8 @@
 	import Introduce from './components/introduce'
 	import PlainTextBlock1 from "./components/PlainTextBlock";
 	import PlainTextBlock2 from "./components/PlainTextBlock2";
-	import GraphicIntroduction from "./components/GraphicIntroduction"
+	import GraphicIntroduction1 from "./components/GraphicIntroduction1"
+	import GraphicIntroduction2 from "./components/GraphicIntroduction2"
 
 	export default {
 		name: 'app',
@@ -40,7 +42,8 @@
 			Introduce,
 			PlainTextBlock1,
 			PlainTextBlock2,
-			GraphicIntroduction
+			GraphicIntroduction1,
+			GraphicIntroduction2
 		}
 	}
 </script>

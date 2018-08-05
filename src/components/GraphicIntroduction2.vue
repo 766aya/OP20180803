@@ -1,19 +1,19 @@
 <template>
     <div id="GraphicIntroduction" class="container" :style="{'height': 317*(dataList.length)/2 + 228+'px'}">
         <div class="content">
-            <div class="text-group">
-                <p class="text t1">Where will the mastermind take place?</p>
-                <p class="text t2">Zakynthos GREECE</p>
-                <p class="text t2">September 15th - 19th 2018</p>
-                <p class="text t1">Check out our 6000 Sq ft Private Villa</p>
+            <p class="text t1">Who else is going to be there?</p>
+            <div class="side">
+                <div class="red"></div>
+                <div class="black"></div>
             </div>
-            <Imgs-side v-for="(item,index) in dataList" :key="index" class="imgs-side " :class="{'odd': index%2 !== 0}" :item="item"></Imgs-side>
+            <p class="text t2">An inspiring lineup of speakers with proven track records for success. Learn from the best and apply everything directly to your business.</p>
+            <p class="text t3">Nick Peroni, Depesh Mandalia & me are going to be there physically</p>
         </div>
     </div>
 </template>
 
 <script>
-    import ImgsSide from './ImgsSide'
+    import ImgsSide from './ImgsSide2'
 
     export default {
         name: 'GraphicIntroduction',
@@ -55,34 +55,36 @@
 </script>
 
 <style scoped>
-    .text-group {
-        width: 100%
-    }
-    .text-group p {
+    .text {
+        color: #2F2F2F;
         text-align: center;
     }
-    .text {
+    .side {
+        width: 150px;
+        height: 5px;
+        margin: 0 auto;
+    }
+    .side div {
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
+    .side div.red {
+        background: #FF0036;
+    }
+    .side div.black {
+        background: #2D2D2D;
+    }
+    .t1 {
+        font-size: 44px;
         font-weight: 700;
-        color: #2D2D2D;
-    }
-    .t1:first-child {
-        font-size: 38px;
-        margin-top: 0;
-        margin-bottom: 25px;
-    }
-    .t1:last-child {
-        font-size: 38px;
-        margin-top: 25px;
-        margin-bottom: 0;
+        margin: 20px 0;
     }
     .t2 {
-        font-size: 26px;
-        margin: 0;
+        font-size: 22px;
     }
-    .imgs-side {
-        margin: 15px 0px;
-    }
-    .odd {
-        margin-left: 110px;
+    .t3 {
+        font-size: 32px;
+        font-weight: 700;
     }
 </style>
