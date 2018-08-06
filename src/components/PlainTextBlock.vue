@@ -62,7 +62,7 @@
     }
     ul li {
         font-size: 22px;
-        padding-bottom: 6px;
+        padding-bottom: 12px;
     }
     ul li::before {
         padding-right: 10px;

@@ -1,5 +1,5 @@
 <template>
-    <div id="GraphicIntroduction" class="container" :style="{'height': 317*(dataList.length)/2 + 228+'px'}">
+    <div id="GraphicIntroduction" class="container">
         <div class="content">
             <p class="text t1">Who else is going to be there?</p>
             <div class="side">
@@ -7,8 +7,19 @@
                 <div class="black"></div>
             </div>
             <p class="text t2">An inspiring lineup of speakers with proven track records for success. Learn from the best and apply everything directly to your business.</p>
-            <p class="text t3">Nick Peroni, Depesh Mandalia & me are going to be there physically</p>
+            <p class="text t3">Nick Peroni, Depesh Mandalia &amp; me are going to be there physically</p>
         </div>
+        <div class="content">
+        	<Imgs-side v-for="(item, index) in dataList1" :item="item" :class="{'m30': index!=0}"></Imgs-side>
+        </div>
+        <div class="content" style="clear: both; height: 1px;"></div>
+        <div class="content" style="margin-top: 20px;">
+            <p class="text t3">Thomas Bartke, Mo Ali Aguel and John Hutchison will be with us digitally</p>
+        </div>
+        <div class="content">
+        	<Imgs-side v-for="(item, index) in dataList2" :item="item" :class="{'m30': index!=0}"></Imgs-side>
+        </div>
+        <div class="content" style="clear: both; height: 1px;"></div>
     </div>
 </template>
 
@@ -16,34 +27,37 @@
     import ImgsSide from './ImgsSide2'
 
     export default {
-        name: 'GraphicIntroduction',
+        name: 'GraphicIntroduction2',
         data () {
             return {
-                dataList: [
+                dataList1: [
                     {
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/47/9198a167f611e88f7d8f6a0693716a/010-_2_.jpg',
-                        title: 'The Infinity Pool'
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/77/9cd3f0680211e8aa8e9156f320797b/12794561_10208289750178230_8719256171907727336_n.jpg',
+                        title: 'Dimitris Skiadas',
+                        desc: 'Conversion Masters'
                     },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/c0/7fcf9067ea11e88e4095e70afff17d/007-_1_.jpg',
-                        title: 'The Breathtaking View from the pool'
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/74/db049067f111e88b5aef3bb36cf0cf/22520173_10101864494335589_3073692298959868496_o.jpg',
+                        title: 'Nick Peroni',
+                        desc: 'Ecom Empires'
                     },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/7a/a36881689711e8b6c34df9023e2cdf/013-_1_.jpg',
-                        title: 'The View to the Tree House & Tennis Court'
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/bf/114f608d2111e893c529b7733381bd/23116717_10155650172350498_4324371780502520801_o.jpg',
+                        title: 'Depesh Mandalia',
+                        desc: 'FB Ads Experts Academy'
+                    }
+                ],
+                dataList2: [
+                    {
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/cf/bd025067f111e8bea339625abaf3a0/20863387_10211686991803259_2241106883902257054_o.jpg',
+                        title: 'Thomas Bartke',
+                        desc: 'Trackify'
                     },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/91/cef510689711e8aebbb5027d42f117/048.jpg',
-                        title: 'The View from the Barbecue'
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/be/8226a067f111e88b5aef3bb36cf0cf/26220618_10159725752960177_2115431594955615276_o.jpg',
+                        title: 'Mohamed Ali Aguel',
+                        desc: 'Always Listen To Mo'
                     },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/b2/888fb067f611e88d9ca3c57d0f1fab/040-_1_.jpg',
-                        title: 'Where our mastermind is going to be hosted'
-                    },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/e2/7515e167f611e89493673c7c6bcc4e/003-_1_.jpg',
-                        title: 'Sunset View from one of the Bedrooms :)'
-                    },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/32/44b5d0696411e89d364fe9c13c5996/004.jpg',
-                        title: 'One of the bedrooms & bathroom'
-                    },{
-                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/42/1ad161696411e8a9d20bb4286b05c6/006.jpg',
-                        title: 'Barbecue with a view'
+                        imgurl: 'https://www.thegreekmastermind.com/hosted/images/dc/ee3ca067f111e8a0cec76bf24cc2c2/21056104_1882582312061654_8315331212507508659_o.jpg',
+                        title: 'John Hutchison',
+                        desc: 'Conversion Secrets'
                     }
                 ]
             }
@@ -86,5 +100,8 @@
     .t3 {
         font-size: 32px;
         font-weight: 700;
+    }
+    .m30 {
+    	margin-left: 30px;
     }
 </style>
